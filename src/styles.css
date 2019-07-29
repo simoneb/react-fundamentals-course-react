@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+  --spacing: 8px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: var(--spacing);
+}
+
+.selects {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.selects > select + select {
+  margin-left: var(--spacing);
+}
+
+.red-box {
+  height: 20px;
+  width: 20px;
+  background: red;
+}
+
+.red-container {
+  border: 1px solid red;
+}
+
+.blue-container {
+  border: 1px solid blue;
+}
