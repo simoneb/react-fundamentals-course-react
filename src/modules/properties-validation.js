@@ -14,7 +14,7 @@ export function DefaultProperties(props) {
     }
   }
 
-  return <ComponentWithDefaultProperties name="Simone Busoli" />
+  return <ComponentWithDefaultProperties />
 }
 
 // see browser's console

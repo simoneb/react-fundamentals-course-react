@@ -11,7 +11,7 @@ export function ComponentsAsFunctions() {
 export function FunctionComponent() {
   const Welcome = props => <h1>Hello, {props.name}</h1>
 
-  return <Welcome name="Simone Busoli" />
+  return <Welcome name="John Doe" />
 }
 
 export function ClassComponent() {

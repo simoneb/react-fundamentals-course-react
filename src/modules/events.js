@@ -81,7 +81,7 @@ export class EventsAndStateWithArrowFunction extends React.Component {
 }
 
 export class PreventingDefault extends React.Component {
-  handleSubmit = () => {}
+  handleSubmit = e => e.preventDefault()
 
   render() {
     return (
