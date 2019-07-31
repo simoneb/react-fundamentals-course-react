@@ -11,6 +11,7 @@ import * as components from './modules/components'
 import * as properties from './modules/properties-validation'
 import * as stateLifecycle from './modules/state-lifecycle'
 import * as events from './modules/events'
+import * as workingWithState from './modules/working-with-state'
 import * as conditionalRendering from './modules/conditional-rendering'
 import * as lists from './modules/lists'
 import * as forms from './modules/forms'
@@ -21,6 +22,8 @@ import * as http from './modules/http'
 import * as routing from './modules/routing'
 import * as hooks from './modules/hooks'
 import * as context from './modules/context'
+import * as customHooks from './modules/custom-hooks'
+import * as testing from './modules/testing'
 
 const modules = [
   jsx,
@@ -29,6 +32,7 @@ const modules = [
   properties,
   stateLifecycle,
   events,
+  workingWithState,
   conditionalRendering,
   lists,
   forms,
@@ -39,6 +43,8 @@ const modules = [
   routing,
   hooks,
   context,
+  customHooks,
+  testing
 ]
 
 function firstFunctionNameOfModule(module) {
