@@ -4,24 +4,30 @@ export const name = 'components'
 
 export function ComponentsAsFunctions() {
   const Welcome = props => <h1>hello, {props.name}</h1>
+
+  return ''
 }
 
 export function FunctionComponent() {
-  function Welcome(props) {
-    return <h1>Hello, {props.name}</h1>
-  }
+  const Welcome = props => <h1>Hello, {props.name}</h1>
 
-  return <Welcome name="John Doe" />
+  return <Welcome name="Simone Busoli" />
 }
 
 export function ClassComponent() {
   class Welcome extends React.Component {
     render() {
-      return <h1>Hello, {this.props.name}</h1>
+      const { name, surname } = this.props
+
+      return (
+        <h1>
+          Hello, {name} {surname}
+        </h1>
+      )
     }
   }
 
-  return <Welcome name="John Doe" />
+  return <Welcome name="John" surname="Doe" />
 }
 
 export function Composition() {
@@ -92,7 +98,7 @@ export function ExtractingComponents() {
       author={{
         avatarUrl:
           'http://files.softicons.com/download/toolbar-icons/24x24-free-button-icons-by-aha-soft/ico/user-admin.ico',
-        name: 'John Doe',
+        name: 'John Doe'
       }}
       text="Some comment text"
       date={new Date().toLocaleDateString()}

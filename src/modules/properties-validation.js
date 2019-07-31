@@ -4,15 +4,17 @@ import T from 'prop-types'
 export const name = 'properties and validation'
 
 export function DefaultProperties(props) {
-  function ComponentWithDefaultProperties(props) {
-    return <h1>Hello, {props.name}!</h1>
+  class ComponentWithDefaultProperties extends React.Component {
+    static defaultProps = {
+      name: 'John Doe'
+    }
+
+    render() {
+      return <h1>Hello, {this.props.name}!</h1>
+    }
   }
 
-  ComponentWithDefaultProperties.defaultProps = {
-    name: 'John Doe',
-  }
-
-  return <ComponentWithDefaultProperties />
+  return <ComponentWithDefaultProperties name="Simone Busoli" />
 }
 
 // see browser's console
@@ -22,7 +24,7 @@ export function Validation() {
   }
 
   ComponentWithValidation.propTypes = {
-    name: T.string.isRequired,
+    name: T.string.isRequired
   }
 
   return <ComponentWithValidation name={1} />

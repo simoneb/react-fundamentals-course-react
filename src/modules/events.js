@@ -21,18 +21,12 @@ export class OnClickClassBased extends React.Component {
 }
 
 export class EventsAndStateWithBinding extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isToggleOn: true }
+  state = { isToggleOn: true }
 
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick() {
+  handleClick = () =>
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
+      isToggleOn: !state.isToggleOn
     }))
-  }
 
   render() {
     return (
@@ -52,7 +46,7 @@ export class EventsAndStateWithClassFieldSyntax extends React.Component {
 
   handleClick = () => {
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
+      isToggleOn: !state.isToggleOn
     }))
   }
 
@@ -73,7 +67,7 @@ export class EventsAndStateWithArrowFunction extends React.Component {
 
   handleClick() {
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn,
+      isToggleOn: !state.isToggleOn
     }))
   }
 
@@ -87,7 +81,7 @@ export class EventsAndStateWithArrowFunction extends React.Component {
 }
 
 export class PreventingDefault extends React.Component {
-  handleSubmit = e => e.preventDefault()
+  handleSubmit = () => {}
 
   render() {
     return (

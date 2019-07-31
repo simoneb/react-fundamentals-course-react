@@ -61,7 +61,7 @@ export function ClockWithState() {
     constructor(props) {
       super(props)
       this.state = {
-        date: new Date(),
+        date: new Date()
       }
     }
 
@@ -83,7 +83,7 @@ export function LifecycleMethods() {
     constructor(props) {
       super(props)
       this.state = {
-        date: new Date(),
+        date: new Date()
       }
     }
 
@@ -112,7 +112,7 @@ export class Clock extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      date: new Date(),
+      date: new Date()
     }
   }
 
@@ -141,6 +141,7 @@ export class AsyncStateUpdate extends React.Component {
 
   incrementCounterUnsafe = () =>
     this.setState({ counter1: this.state.counter1 + 1 })
+
   incrementCounterSafe = () =>
     this.setState(state => ({ counter2: state.counter2 + 1 }))
 
@@ -165,9 +166,9 @@ export class AsyncStateUpdate extends React.Component {
 export function StateIsLocal() {
   return (
     <div>
-      <Clock />
-      <Clock />
-      <Clock />
+      <AsyncStateUpdate />
+      <AsyncStateUpdate />
+      <AsyncStateUpdate />
     </div>
   )
 }

@@ -6,6 +6,7 @@ export const name = 'rendering elements'
 export function Render() {
   const element = <h1>Hello, world</h1>
   ReactDOM.render(element, document.getElementById('test-bed'))
+  return ''
 }
 
 export function UpdatingTheRenderedElement() {
@@ -20,4 +21,6 @@ export function UpdatingTheRenderedElement() {
   }
 
   setInterval(tick, 1000)
+
+  return ''
 }

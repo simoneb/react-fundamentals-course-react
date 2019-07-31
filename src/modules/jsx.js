@@ -22,7 +22,7 @@ export function EmbeddingComplexEspressions() {
 
   const user = {
     firstName: 'John',
-    lastName: 'Doe',
+    lastName: 'Doe'
   }
 
   const element = <h1>Hello, {formatName(user)}!</h1>
@@ -35,6 +35,11 @@ export function JsxIsAnExpressionToo() {
     return user.firstName + ' ' + user.lastName
   }
 
+  const user = {
+    firstName: 'John',
+    lastName: 'Doe'
+  }
+
   function getGreeting(user) {
     if (user) {
       return <h1>Hello, {formatName(user)}!</h1>
@@ -42,7 +47,7 @@ export function JsxIsAnExpressionToo() {
     return <h1>Hello, Stranger.</h1>
   }
 
-  return getGreeting()
+  return getGreeting(user)
 }
 
 export function AttributesSimple() {
@@ -80,7 +85,7 @@ export function Safety() {
 
 export function CanAlsoBeUnsafe() {
   const maliciousInput = {
-    __html: "<img src='https://google.com' onerror=\"alert('boom')\">",
+    __html: "<img src='https://google.com' onerror=\"alert('boom')\">"
   }
   const element = <div dangerouslySetInnerHTML={maliciousInput} />
 
